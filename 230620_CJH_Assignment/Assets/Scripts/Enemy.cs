@@ -18,6 +18,6 @@ public class Enemy
     public void GetEnemyInfo()
     {
         UnityEngine.Debug.Log($"Name : {this.name} hp : {this.hp}");
-        //Debug.Log($"Name : {this.name} hp : {this.hp} attack : {this.attack}");
+        //Debug.Log($"Name : {this.name} hp : {this.hp");
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Main : MonoBehaviour
 {
-    
+
 
     // Start is called before the first frame update
     void Start()
@@ -14,11 +14,33 @@ public class Main : MonoBehaviour
 
         e1.GetEnemyInfo();
         e2.GetEnemyInfo();
+
+
+
+        List<Character> c;
+
+        c.Add(new Character("이름1", "직업1", 10, 10));
+
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    void CreateCharacter()
+    {
+
+    }
+
+    void RemoveCracter()
+    {
+
+    }
+
+    void PrintAllCharacter()
+    {
+
     }
 }

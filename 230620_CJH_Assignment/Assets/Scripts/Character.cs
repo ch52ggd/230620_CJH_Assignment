@@ -10,21 +10,16 @@ public class Character
     private int hp;
     private int atk;
 
-    public string Name { get { return name; } set { } }
-    public string Job { get { return job; } set { } }
-    public int HP { get { return hp; } set { } }
-    public int Atk { get {  return atk; } set { } }
-
     public Character(string name, string job, int hp, int atk)
     {
-        Name = name;
-        Job = job;
-        HP = hp;
-        Atk = atk;
+        name = this.name;
+        job = this.job;
+        hp = this.hp;
+        atk = this.atk;
     }
 
-    void GetInfo()
+    public void GetInfo()
     {
-        Debug.Log($"Name : {Name} Job : {Job} HP : {HP} Atk : {Atk}");
+        Debug.Log($"Name : {this.name} Job : {this.job} HP : {this.hp} Atk : {this.atk}");
     }
 }

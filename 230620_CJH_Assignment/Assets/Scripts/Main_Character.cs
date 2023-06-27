@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Main : MonoBehaviour
+public class Main_Character : MonoBehaviour
 {    
     List<Character> characterList;
 

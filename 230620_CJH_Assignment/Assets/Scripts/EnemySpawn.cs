@@ -15,7 +15,7 @@ public class EnemySpawn : MonoBehaviour
 
         Enemy e = new Enemy(Enemy.EnemyType.Basic, 100, 10, 0.015f);
 
-        obj.GetComponent<EnemyObject>().SetEnemy(e);
+        //obj.GetComponent<EnemyObject>().SetEnemy(e);
     }
 
     // Update is called once per frame

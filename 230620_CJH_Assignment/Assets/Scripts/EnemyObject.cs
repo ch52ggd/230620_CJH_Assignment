@@ -15,13 +15,13 @@ public class EnemyObject : MonoBehaviour
     {
         this.enemy = e;
 
-        hpbar.maxValue = enemy.HP;
-        hpbar.value = enemy.HP;
+        this.hpbar.maxValue = enemy.HP;
+        this.hpbar.value = enemy.HP;
     }
 
     private void Start()
     {
-        SetEnemy(new Enemy(Enemy.EnemyType.Basic, 100, 10, 1.5f));
+        SetEnemy(new Enemy(Enemy.EnemyType.Basic, 100, 10, 0.015f));
     }
 
     private void Update()
@@ -39,7 +39,7 @@ public class EnemyObject : MonoBehaviour
         }
         else if(transform.position.y > -3)
         {
-            transform.Translate(0, -0.015f, 0);
+            transform.Translate(0, -enemy.Speed, 0);
         }
 
         /* 실수형 변수는 딱 나누어 떨어지지 않아서 == 연산자 사용 X

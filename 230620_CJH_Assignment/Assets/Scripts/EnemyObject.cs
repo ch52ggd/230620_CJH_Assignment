@@ -8,7 +8,7 @@ public class EnemyObject : MonoBehaviour
     [SerializeField] private Sprite[] enemyImg;
     [SerializeField] private Slider hpbar;
 
-    Enemy enemy;
+    Enemy enemy = null;
 
 
     public void SetEnemy(Enemy e)
@@ -21,7 +21,7 @@ public class EnemyObject : MonoBehaviour
 
     private void Start()
     {
-        SetEnemy(new Enemy(Enemy.EnemyType.Basic, 100, 10, 0.015f));
+        //SetEnemy(new Enemy(Enemy.EnemyType.Basic, 100, 10, 0.015f));
     }
 
     private void Update()
@@ -32,6 +32,11 @@ public class EnemyObject : MonoBehaviour
 
     void MoveEnemy()
     {
+        /* 실수형 변수는 딱 나누어 떨어지지 않아서 == 연산자 사용 X
+         * <= 이거나 >= 이거 사용 O
+         */
+
+        /*
         if(transform.position.y < -3)
         {
             //transform.Translate(0, 0, 0);
@@ -41,9 +46,10 @@ public class EnemyObject : MonoBehaviour
         {
             transform.Translate(0, -enemy.Speed, 0);
         }
+        */
 
-        /* 실수형 변수는 딱 나누어 떨어지지 않아서 == 연산자 사용 X
-         * <= 이거나 >= 이거 사용 O
-         */
+        if (this.transform.position.y <= -2.0f) return;
+
+        this.transform.position -= new Vector3(0, enemy.Speed * Time.deltaTime, 0);
     }
 }
